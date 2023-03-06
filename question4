@@ -1,0 +1,5 @@
+import pandas as pd, seaborn as sns
+
+df = pd.read_csv("country_vaccination_stats.csv")
+
+df['daily_vaccinations'].fillna(df['daily_vaccinations'].min(), inplace=True)
